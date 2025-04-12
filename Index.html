@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Learning - Portfolio</title>
+    <style>
+        body {
+            background-color: #ffe4e1; /* Light pink background */
+            font-family: 'Courier New', monospace;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #000;
+            padding-bottom: 0.5rem;
+        }
+
+        .project {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .project h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .hacker-look {
+            background-color: #000;
+            color: #00ff00; /* Green text for hacker effect */
+            font-family: monospace;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 255, 0, 0.2);
+            overflow-x: auto; /* Enable horizontal scrolling for long code snippets */
+            white-space: pre-wrap; /* Preserve whitespace and line breaks */
+        }
+
+        .hacker-look::before {
+            content: "> "; /* Add a command prompt style prefix */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Complex Learning</h1>
+        <p>CS Student | Complex Systems Enthusiast</p>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>About Me</h2>
+            <p>I'm a computer science student with a deep fascination for complex systems and their underlying principles. I'm passionate about exploring the intersections of computation, intelligence, and emergence. I enjoy diving into intricate algorithms, data structures, and the fascinating world of artificial intelligence. I like to create tools that automate tasks, and solve complex problems. </p>
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Autonomous Navigation System</h3>
+                <p>Developed an autonomous navigation system using sensor fusion and path planning algorithms. Implemented in Python with ROS.</p>
+            </div>
+            <div class="project">
+                <h3>Neural Network Simulation</h3>
+                <p>Built a simulation of a spiking neural network to model complex information processing. Implemented using TensorFlow.</p>
+            </div>
+            <div class="project">
+              <h3>Web Scraping Tool</h3>
+              <p>Created a tool to scrape data from websites, and store data within a local database, then create reports based on the scraped data. </p>
+            </div>
+            <div class="project">
+                <h3>Complex system simulation</h3>
+                <p>Simulated an agent based system, to simulate flocking behaviour, and emergent properties.</p>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2>Code Snippet (Hacker Look)</h2>
+            <pre class="hacker-look">
+                # Example Python code snippet
+                def complex_function(data):
+                    result = []
+                    for item in data:
+                        if item % 2 == 0:
+                            result.append(item * 2)
+                        else:
+                            result.append(item + 1)
+                    return result
+
+                data = [1, 2, 3, 4, 5]
+                processed_data = complex_function(data)
+                print(processed_data) # Output: [2, 4, 4, 8, 6]
+            </pre>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Complex Learning</p>
+    </div>
+
+</body>
+</html>
