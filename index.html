@@ -2,26 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Dwimu Rani Brahma</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Dwimu Rani Brahma - 3D Portfolio</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f7f7f7; }
+    canvas { display: block; position: fixed; top: 0; left: 0; z-index: -1; }
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    h1 { font-size: 3em; margin-bottom: 0.5em; }
+    .section {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .project-item {
+      text-align: center;
+      max-width: 300px;
+    }
+    .project-item img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>About Me</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-    </nav>
-  </header>
-  <main>
-    <section class="bio">
-      <p>Hello! I'm <strong>Dwimu Rani Brahma</strong>, a BCA second-year student with a passion for creativity and technology. My journey intertwines the tactile beauty of crochet, the flavors of cooking, and the expressive realms of art and craft. Currently, I'm expanding my technical horizons by learning HTML and Python, aiming to blend my artistic skills with the digital world.</p>
-      <p>I'm known for my perseverance and attention to detail. While I may take a bit more time to complete tasks, I ensure they are done thoroughly and to perfection. My commitment to excellence drives me to see every project through to its best possible outcome.</p>
-    </section>
-  </main>
-  <footer>
-    <p>Contact: dwimurani@example.com</p>
-  </footer>
+  <div class="content">
+    <h1>Dwimu Rani Brahma</h1>
+
+    <div class="section">
+      <h2>About Me</h2>
+      <p>I am a 19-year-old BCA 2nd last year student. I am learning web development and cybersecurity. I specialize in crochet, cooking, and art and craft.</p>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Web Development (HTML, CSS, JS)</li>
+        <li>Cybersecurity (Basics of OSINT)</li>
+        <li>Crochet Crafting</li>
+        <li>Cooking & Recipe Creation</li>
+        <li>Art & Craft Projects</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Projects</h2>
+      <p>Here are some of my crochet projects:</p>
+      <div class="project-gallery">
+        <div class="project-item">
+          <img src="projects/sunflower.jpg" alt="Sunflower">
+          <p>Sunflower Pot</p>
+        </div>
+        <div class="project-item">
+          <img src="projects/bag.jpg" alt="Crochet Bag">
+          <p>Colorful Crochet Bag</p>
+        </div>
+        <div class="project-item">
+          <img src="projects/tulip.jpg" alt="Tulip Flower">
+          <p>Tulip Flower</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <p>Email: dwimu@example.com</p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshNormalMaterial();
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+    camera.position.z = 5;
+
+    function animate() {
+      requestAnimationFrame(animate);
+      cube.rotation.x += 0.01;
+      cube.rotation.y += 0.01;
+      renderer.render(scene, camera);
+    }
+    animate();
+  </script>
 </body>
 </html>
